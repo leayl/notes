@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function removeItem() {
+			if (window.confirm('确认删除吗')) {
+				window.alert('删除成功');
+			} 
+		}
+	</script>
+</head>
+<body>
+	<table width="300px" cellpadding="10" cellspacing="0" border="1">
+		<tr>
+			<td>关于1</td>
+			<td>linda</td>
+			<td><a href="#" onclick="removeItem()">删除</a></td>
+		</tr>
+		<tr>
+			<td>关于2</td>
+			<td>emma</td>
+			<td><a href="#" onclick="removeItem()">删除</a></td>
+		</tr>
+	</table>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>异步加载JS文档</title>
+	<script>
+		function loadJs() {
+			var scriptEle = document.createElement('script');
+			scriptEle.src = 'script/common.js';
+			document.head.appendChild(scriptEle)
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<input type="button" value="点击加载JS文档" onclick="loadJs()">
+	</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html dom</title>
+	<script>
+		function setInlineStyle() {
+			var divEle = document.getElementById('wrapper');
+			divEle.style.width = '300px';
+			divEle.style.height = '200px';
+			divEle.style.margin = '0 auto';
+			divEle.style.border = '1px solid #000';
+			divEle.style.fontSize = '24px';
+			divEle.style.fontWeight = 'bold';
+			divEle.style.fontFamily = '微软雅黑';
+			divEle.style.backgroundImage = 'url(Scandinavia.jpg)'
+			divEle.style.backgroundSize = '300px';
+			divEle.style.backgroundRepeat = 'no-repeat';
+			divEle.style.backgroundPosition = 'bottom';
+		}
+	</script>
+
+</head>
+<body>
+	<div id="wrapper"> Scandinavia </div>
+	<input type="button" value="单击控制行内样式" onclick="setInlineStyle()">
+</body>
+</html>

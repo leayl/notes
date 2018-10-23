@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom编程</title>
+	<script>
+		function changeAttr() {
+			var pEle = document.getElementById('p');
+			var p2Ele = pEle.nextSibling.nextSibling;
+			p2Ele.setAttribute('align','center');
+		};
+	</script>
+</head>
+<body>
+	<p id="p">段落1</p>
+	<p>段落2</p>
+	<input type="button" value="单击，让第二个段落居中" onclick="changeAttr()">
+</body>
+</html>

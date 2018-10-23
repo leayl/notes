@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom编程</title>
+	<script>
+		function empty() {
+			// 获取div
+			var divEle = document.getElementById('div');
+			// 获取div内的子节点数
+			console.log(divEle.childNodes.length);
+			for (var i = 0; i < divEle.childNodes.length; i++) {
+				divEle.removeChild(divEle.childNodes[i]);
+				i--;
+			};
+		};
+	</script>
+</head>
+<body>
+	<p>段落1</p>
+	<div style="border:1px solid #f00" id="div">
+		<h1>1111</h1>
+		<p>111</p>
+		<p>222</p>
+		<p>333</p>
+		<h1>444</h1>
+		<div>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<p>段落2</p>
+	<input type="button" value="点击删除div内所有子节点" onclick="empty()">
+</body>
+</html>

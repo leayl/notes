@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>属性</title>
+	<script>
+		function link(){
+			var linkEle = document.getElementById('link');
+			linkEle.setAttribute('href','http://www.baidu.com');
+			linkEle.setAttribute('target','_blank');
+		};
+	</script>
+</head>
+<body>
+	<a href="#" id="link">百度</a>
+	<p><input type="button" value="单击，链接可用" 
+		onclick='link()'></p>
+</body>
+</html>

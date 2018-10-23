@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>reload</title>
+</head>
+<body>
+	<h1 id="random"></h1>
+	<input type="button" value="单击刷新页面" onclick="refresh()">
+</body>
+	<script>
+		document.getElementById('random').innerHTML = Math.random();
+		function refresh(){
+			location.reload();
+		}
+	</script>
+</html>

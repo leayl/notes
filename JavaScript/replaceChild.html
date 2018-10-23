@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom编程</title>
+	<script>
+		function replaceElement(argument) {
+			// 创建图像节点
+			var imgEle = document.createElement('img');
+			var imgEle.setAttribute('src','../前端/img/troye1.jpg');
+			pEle = document.getElementById('p');
+			document.body.replaceChild(imgEle,pEle)
+		}
+	</script>
+</head>
+<body>
+	<p>11111</p>
+	<p id="p">我是段落</p>
+	<p>22222</p>
+	<input type="button" value="单击将段落替换为图像" onclick="replaceElement()">
+</body>
+</html>

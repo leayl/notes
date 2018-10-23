@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM编程</title>
+	<script>
+		function createImg() {
+			// 创建图像元素
+			var imgEle = document.createElement('img');
+			// 设置属性
+			imgEle.setAttribute('src','../img/troye1.jpg');
+			// 为body元素追加创建的图像
+			document.body.appendChild(imgEle);
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="单击 创建图像"
+	 onclick='createImg()'>
+</body>
+</html>

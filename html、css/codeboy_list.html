@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		li{
+			list-style: none;
+		}
+		a{
+			text-decoration: none;
+		}
+		.cmenu>a{
+			color: #f5f5f5;
+			text-decoration: none;
+			padding-left: 40px;
+			line-height: 36px;
+			font-weight: bold;
+		}
+		#leftsidebar_box{
+			width: 160px;
+			height: 668px;
+			/*border:2px solid grey;*/
+			background-color: #f5f5f5;
+		}
+		.cmenu{
+			height: 36px;
+			background-color: rgb(10, 161, 237);
+			background-repeat: no-repeat;
+			background-position: 10px center;
+			font-size: 14px;
+		}
+		.menu1{
+			background-image: url("codeboy/pages/images/myOrder/myOrder.png");
+		}
+		.menu2{
+			background-image: url("codeboy/pages/images/myOrder/pcenter_icon1.png");
+		}
+		.menu3{
+			background-image: url("codeboy/pages/images/myOrder/pcenter_icon2.png");
+		}
+		.menu4{
+			background-image: url("codeboy/pages/images/myOrder/pcenter_icon3.png");
+		}
+		.submenu{
+			/*height: 38px;*/
+			background:#fff;
+			padding-left: 40px;
+		}
+		.submenu>li>a{
+			font-size: 12px;
+			color: #808080;
+			font-family: "黑体";
+		}
+		.submenu>li>a:hover{
+			color: rgb(10, 161, 237);
+		}
+		.submenu>li{
+			line-height: 40px;
+		}
+	</style>
+</head>
+<body>
+	<div id="leftsidebar_box">
+		<ul>
+			<li class="cmenu menu1">
+				<a>我的订单</a>
+				<img src="codeboy/pages/images/myOrder/myOrder1.png">
+			</li>
+			<ul class="submenu">
+				<li>
+					<a href="">全部订单</a>
+				</li>
+				<li>
+					<a href="">待付款</a>
+				</li>
+				<li>
+					<a href="">待收货</a>
+				</li>
+				<li>
+					<a href="">待评价</a>
+				</li>
+				<li>
+					<a href="">退货退款</a>
+				</li>
+			</ul>
+			<li class="cmenu menu2">
+				<a>我的优惠券</a>
+				<img src="codeboy/pages/images/myOrder/myOrder1.png">
+			</li>
+			<ul class="submenu">
+				<li>
+					<a href="">我的优惠券</a>
+				</li>
+			</ul>
+			<li class="cmenu menu3">
+				<a>收货地址</a>
+				<img src="codeboy/pages/images/myOrder/myOrder1.png">
+			</li>
+			<ul class="submenu">
+				<li>
+					<a href="">地址管理</a>
+				</li>
+			</ul>
+			<li class="cmenu menu4">
+				<a>账号管理</a>
+				<img src="codeboy/pages/images/myOrder/myOrder1.png">
+			</li>
+			<ul class="submenu">
+				<li>
+					<a href="">我的信息</a>
+				</li>
+				<li>
+					<a href="">安全管理</a>
+				</li>
+			</ul>
+			<ul></ul>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom编程</title>
+	<script>
+		function createPara() {
+			// 创建段落节点
+			var pEle = document.createElement('p');
+			// 创建文本节点
+			var txtNode = document.createTextNode('成都大暴雨')
+			// 将文本节点追加到段落节点
+			pEle.appendChild(txtNode)
+			// 将段落节点追加到body
+			document.body.appendChild(pEle)
+		}
+	</script>
+</head>
+<body>
+	<input type="button" value="创建段落，内容自定" onclick="createPara()">
+</body>
+</html>

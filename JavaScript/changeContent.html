@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom编程</title>
+	<script>
+		function changeContent() {
+			var pEle = document.getElementById('p')
+			pEle.firstChild.nodeValue='改好了'
+		}
+	</script>
+</head>
+<body>
+	<p id="p">我是段落</p>
+	<input type="button" value="单击改变段落内容" onclick="changeContent()">
+</body>
+</html>

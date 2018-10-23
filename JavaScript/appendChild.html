@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom编程</title>
+	<script>
+		function addimg() {
+		var imgEle = document.createElement('img');
+		imgEle.setAttribute('src','../img/troye1.jpg');
+		var divEle = document.getElementById('div');
+		divEle.appendChild(imgEle);
+		};
+	</script>
+</head>
+<body>
+	<p>段落1</p>
+	<div id="div" style="border:1px solid #f00"></div>
+	<p>段落2</p>
+	<input type="button" value="单击 添加图片" onclick="addimg()">
+</body>
+</html>

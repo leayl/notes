@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script>
+		console.log(2 == '2');  //true
+		console.log(2 === '2');  //false
+		console.log(undefined == null);  //true
+		console.log(undefined === null);  //false
+		// 自增自减运算符
+		var i = 4;
+		console.log(i++);  //4
+		console.log(i);  //5
+		var m = 3;
+		console.log(++m);  //4
+		console.log(m);  //4
+		var p = 9;
+		p += 3;
+		console.log(p);  //12
+		p /= 2;
+		console.log(p);  //6
+
+		// 三目运算符
+		var m = 7;
+		if(m>=2){
+			var p = 5;
+		} else{
+			var p = 3;
+		}
+		// 简化成
+		var p = m >= 2 ? 5 : 3 ;
+		console.log(p);  //5
+	</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html dom</title>
+	<style>
+		.f1{
+			font-size: 30px;
+			color:#f00;
+		}
+	</style>
+	<script>
+		function useClass(){
+			var pEle = document.getElementById('p')
+			pEle.className = 'f1';
+		}
+	</script>
+</head>
+<body>
+	<p id="p">不可无故哂笑</p>
+	<input type="button" value="单击为段落使用css类" onclick="useClass()">
+</body>
+</html>

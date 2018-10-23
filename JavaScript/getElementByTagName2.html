@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom编程</title>
+	<script>
+		function getLiNum() {
+			var divEle = document.getElementById('div');
+			var liList = divEle.getElementsByTagName('li');
+			for (var i = 0; i < liList.length; i++) {
+				liList[i].parentNode.removeChild(liList[i]);
+				i--;
+			}
+		}
+	</script>
+</head>
+<body>
+	<p></p>
+	<p></p>
+	<div id="div">
+		<ul>
+			<li>li1</li>
+			<li>li2</li>
+			<li>li3</li>
+		</ul>
+	</div>
+	<input type="button" value="单击删除div内的li" onclick="getLiNum()">
+</body>
+</html>

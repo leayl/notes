@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二级联动</title>
+	<style>
+		table{
+			width: 300px;
+			border:1px solid #fff;
+			background: #33ccff;
+			color: #fff;
+
+		}
+	</style>
+	<script>
+		function changePro() {
+			var proEle = document.getElementById('provinces');
+			var province = proEle.value;
+			addCities(province);
+		}
+		function addCities(province) {
+			var hubei = new Array('武汉','荆州','荆门','襄阳','孝感')
+			var hunan = new Array('长沙','张家界','岳阳','凤凰','娄底')
+			var jiangsu = new Array('苏州','无锡','南京','扬州','盐城')
+			var sichuan = new Array('成都','绵阳','宜宾','攀枝花','九寨')
+			var proList = new Array(hubei,hunan,jiangsu,sichuan)
+			var cityEle = document.getElementById('cities')
+			cityEle.length = 1;
+			for (var i = 0; i < proList[province].length; i++) {
+				var optEle = new Option(proList[province][i]);
+				cityEle.add(optEle);
+			}
+		}
+	</script>
+</head>
+<body onload="changePro()">
+	<form method="post" >
+		<table cellspacing ="0px" cellpadding="10px" border="1">
+			<tr>
+				<td>省份</td>
+				<td>
+					<select name='provinces' id="provinces" onchange="changePro()">
+						<option value='0'>湖北</option>
+						<option value='1'>湖南</option>
+						<option value='2'>江苏</option>
+						<option value='3'>四川</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>城市</td>
+				<td>
+					<select name='cities' id="cities">
+						<option value='0'>请选择</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="button" value="确认"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

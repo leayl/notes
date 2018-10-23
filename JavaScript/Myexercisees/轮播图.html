@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>轮播图</title>
+	<style>
+		body,ul,li,ol,div{
+			margin: 0;
+			padding:0;
+		}
+		ul{
+			list-style: none;
+		}
+		#focus{
+			width: 700px;
+			height: 400px;
+			position: relative;
+			margin:0px auto;
+			overflow: hidden;
+			border:1px solid #000;
+		}
+		#focusText{
+			position: absolute;
+			right:10px;
+			bottom:10px;
+			border:1px solid #000;
+		}
+		#focusText li{
+			float: left;
+			display: inline-block;
+			margin: 5px 5px;
+		}
+		.checked{
+			font-size: 10px;
+			background-color: #000;
+			color: #fff;
+			width: 15px;
+			height: 15px;
+		}
+	</style>
+</head>
+<body>
+	<div id = 'focus'>
+		<ul id="focusImage">
+			<li><img src="../../img/troye1.jpg" alt=""></li>
+			<li><img src="../../img/troye2.jpg" alt=""></li>
+			<li><img src="../../img/troye1.jpg" alt=""></li>
+			<li><img src="../../img/troye2.jpg" alt=""></li>
+		</ul>
+		<ul id="focusText">
+			<li class = 'checked'>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+		</ul>
+	</div>
+</body>
+</html>

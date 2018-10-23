@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html dom</title>
+	<script>
+		function checked_box(){
+			checkEle = document.getElementById('check');
+			checkEle.checked = true;
+			checkEle.disabled = true;
+		}
+	</script>
+</head>
+<body>
+	<p><input type="checkbox" id="check"></p>
+	<p><input type="button" value="单击，使复选框选中" onclick="checked_box()"></p>
+</body>
+</html>

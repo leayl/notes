@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom编程</title>
+	<script>
+		function removePara(){
+			var pEle = document.getElementById('p');
+			document.body.removeChild(pEle);
+		}
+	</script>
+</head>
+<body>
+	<p id="p">段落</p>
+	<input type="button" value="点击删除段落" onclick="removePara()">
+</body>
+</html>

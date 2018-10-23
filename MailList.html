@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QQ邮件</title>
+	<script>
+		function controlCkBoxClick() {
+			var controlboxEle = document.getElementById('allcheck');
+			var mailCkBoxEle = document.getElementsByName('mailCkBox');
+ 				for (var i = 0; i < mailCkBoxEle.length; i++) {
+					mailCkBoxEle[i].checked = controlboxEle.checked;
+				}
+			controlBtnStatus();
+		}
+
+		function getCheckedNum() {
+			var count = 0;
+			var mailCkBoxEle = document.getElementsByName('mailCkBox');
+			for (var i = 0; i < mailCkBoxEle.length; i++) {
+				if(mailCkBoxEle[i].checked){
+					count ++;
+				}
+			}
+			return count
+		}
+		// 单击每一个复选框时调用
+		function mailCkBoxClick(){
+			var mailCkBoxEle = document.getElementsByName('mailCkBox')
+			var controlboxEle = document.getElementById('allcheck')
+			if (mailCkBoxEle.length == getCheckedNum()) {
+				controlboxEle.checked = true;
+			} else {
+				controlboxEle.checked = false;
+			}
+			controlBtnStatus();
+		}
+		function controlBtnStatus() {
+			var recycleEle = document.getElementById('recycleBtn');
+			var deleteEle = document.getElementById('deleteBtn');
+			// if (getCheckedNum() >= 1) {
+			// 	recycleEle.disabled = false;
+			// 	deleteEle.disabled = false;
+			// }else{
+			// 	recycleEle.disabled = true;
+			// 	deleteEle.disabled = true;
+			// }
+			// 简洁方法
+			recycleEle.disabled = deleteEle.disabled = !getCheckedNum() >= 1;
+		}
+	</script>
+</head>
+<body>
+	<div id="container">
+		<table border="1px" width="500px" cellpadding="10px" cellspacing="0px">
+			<tr>
+				<td colspan="3">
+					<input type="button" value="放入回收站" id="recycleBtn" disabled>
+					<input type="button" value="彻底删除" id="deleteBtn" disabled>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="controlbox" id="allcheck" onclick="controlCkBoxClick()"></td>
+				<td>Theme</td>
+				<td>address</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="mailCkBox"
+					onclick="mailCkBoxClick()"></td>
+				<td>about Australia</td>
+				<td>Troye@gmail.com</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="mailCkBox"
+					onclick="mailCkBoxClick()"></td>
+				<td>about Spain</td>
+				<td>Cecilia@gmail.com</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="mailCkBox"
+					onclick="mailCkBoxClick()"></td>
+				<td>about Finland</td>
+				<td>Mind@gmail.com</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="mailCkBox"
+					onclick="mailCkBoxClick()"></td>
+				<td>about Danmark</td>
+				<td>Lea@gmail.com</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="mailCkBox"
+					onclick="mailCkBoxClick()"></td>
+				<td>about Mexcio</td>
+				<td>Violete@gmail.com</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

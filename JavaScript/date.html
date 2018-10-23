@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Date</title>
+	<script>
+		var date = new Date()
+		var year = date.getYear()
+		console.log(year) //118
+		var year = date.getFullYear()
+		console.log(year) //2018
+		var month = date.getMonth() + 1
+		console.log(month) //7
+		var date1 = date.getDate()
+		console.log(date1) //9
+		var weekday = date.getDay()
+		console.log(weekday) //0
+		var hour = date.getHours()
+		console.log(hour) //16
+		var minute = date.getMinutes()
+		console.log(minute) //22
+		var second = date.getSeconds()
+		console.log(second) //23
+		var millisecond = date.getMilliseconds()
+		console.log(millisecond) //621
+
+		var date2 = date.toUTCString()
+		console.log(date2) //Mon, 09 Jul 2018 08:50:25 GMT
+		var date3 = date.toGMTString()
+		console.log(date3) //Mon, 09 Jul 2018 08:50:25 GMT
+		
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

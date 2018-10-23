@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom编程</title>
+	<script>
+		function changeLi() {
+			var pEle = document.getElementById('p');
+			var divEle = pEle.parentNode;
+			var ulEle = divEle.nextElementSibling;
+			var liEle = ulEle.firstChild.nextSibling;
+			liEle.setAttribute('type','circle');			
+		}
+	</script>
+</head>
+<body>
+	<div>
+		<p id="p">段落1</p>
+		<p>段落2</p>
+	</div>
+	<ul>
+		<li>li1</li>
+		<li>li2</li>
+	</ul>
+	<input type="button" value="控制第一个li的类型" onclick="changeLi()">
+</body>
+</html>

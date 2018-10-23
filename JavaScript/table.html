@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html dom</title>
+	<script>
+		function changeAttr(){
+			tableEle = document.getElementById('table');
+			tableEle.width = '300px';
+			tableEle.border = '1px';
+			tableEle.cellSpacing = '2px';
+			tableEle.cellPadding = '10px';
+		}
+	</script>
+</head>
+<body>
+	<table id="table">
+		<tr>
+			<td>瑞典</td>
+			<td>斯德哥尔摩</td>
+		</tr>
+		<tr>
+			<td>挪威</td>
+			<td>奥斯陆</td>
+		</tr>
+		<tr>
+			<td>冰岛</td>
+			<td>雷克雅未克</td>
+		</tr>
+		<tr>
+			<td>芬兰</td>
+			<td>赫尔辛基</td>
+		</tr>
+		<tr>
+			<td>丹麦</td>
+			<td>哥本哈根</td>
+		</tr>
+	</table>
+		<input type="button" value="控制表格的属性" onclick="changeAttr()">
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组的遍历</title>
+	<script>
+		var arr = ['a','b','c','d'];
+		var count = arr.unshift('f','g');
+		console.log('数组长度:'+count+' 为：'+arr)
+		// 数组长度:6 为：f,g,a,b,c,d;
+		var first = arr.shift();
+		console.log('数组长度：'+arr.length+' 是：'
+			+arr+' '+first+'被删除')
+		// 数组长度：5 是：g,a,b,c,d f被删除
+		var str = arr.join('|')
+		console.log(str) //g|a|b|c|d
+		var arr1 = str.split('|')
+		console.log(arr1) //(5) ["g", "a", "b", "c", "d"]
+		// Array.isArray方法
+		console.log(typeof(arr)) //object
+		console.log(Array.isArray(arr)) //true
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

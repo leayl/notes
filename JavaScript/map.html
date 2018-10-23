@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>map</title>
+	<script>
+		var data = [1,2,3,4,5];
+		var new_arr = data.map(function(val){
+			return Math.pow(val,3);
+		});
+		console.log(Array.isArray(new_arr));
+		console.log(new_arr)
+		
+		var arrs=['PNG','JPG','JPEG','GIF'];
+		var new_arrs = arrs.map(function(val){
+			return val.toLowerCase();
+		});
+		console.log(new_arrs)
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

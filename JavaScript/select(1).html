@@ -1,0 +1,78 @@
+<!-- 列表二级联动 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>html dom</title>
+	<script>
+		function changeCity() {
+			var proEle = document.getElementById('provinces');
+			var province = proEle.value;
+			var cityEle = document.getElementById('cities');
+			addCity(province,cityEle)
+		}
+		function addCity(province,cityEle){
+			var hubei =  new Array('武汉','襄阳','荆州','荆门',' 咸宁')
+			var sichuan =  new Array('成都','绵阳','南充','乐山','攀枝花','宜宾','九寨','马尔康')
+			var yunnan =  new Array('大理','个旧','双廊','沙溪','楚雄','昆明')
+			var taiwan =  new Array('台北','高雄','桃园','台南','台中','新竹')
+			var proList = new Array(hubei,sichuan,yunnan,taiwan)
+			cityEle.length = 1;
+			for (var i = 0; i < proList[province].length; i++) {
+				var opEle = new Option(proList[province][i])
+				cityEle.add(opEle);
+			}
+		}
+	</script>
+	<style>
+		body{
+			display: block;
+			font-size: 16px;
+		}
+		table{
+			background-color:#33ccff ;
+			color: #fff;
+			border-style: none;
+			border-color: #fff;
+		}
+		select,input{
+			height: 30px;
+			width: 100px;
+			color: #33ccff;
+		}
+		input{
+			background:#fff;
+			border-style: none;
+		}
+	</style>
+</head>
+<body onload="changeCity()">
+	<form action="" method="post">
+		<table width="300px" border="1px" cellspacing="0px" cellpadding="10px">
+			<tr>
+				<td>省份</td>
+				<td>
+					<select name="provinces" id="provinces" onchange="changeCity()">
+					<option value="0">湖北省</option>
+					<option value="1">四川省</option>
+					<option value="2">云南省</option>
+					<option value="3">台湾省</option>
+				</select>
+			</td>
+			</tr>
+			<tr>
+				<td>城市</td>
+				<td>
+					<select name="cities" id="cities">
+					<option value="0">请选择</option>
+				</select>
+			</td>
+			</tr>
+			<tr>
+				<td></td>	
+				<td><input type="button" value="确认"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

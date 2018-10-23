@@ -1,0 +1,3 @@
+1.iframe标记
+
+<iframe src="网页的URL地址" width="宽度" height="高度" frameborder="是否存在边框线(0/1)" scrolling="滚动条的显示方式(yes/no/auto)"></iframe>

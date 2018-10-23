@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script>
+		function validateForm() {
+			var usernameEle = document.getElementById('username');
+			var usernameVal = entitis(usernameEle.value);
+			var password1Ele = document.getElementById('password1');
+			var passwordVal = entitis(passwordEle.value);
+			var password2Ele = document.getElementById('password2');
+			var password2Val = entitis(password2Ele.value);
+			if(usernameVal.length == 0){
+				window.alert('用户名不能为空');
+				usernameEle.focus();
+				return false;
+			}
+			if(password1Val.length == 0){
+				window.alert('密码不能为空');
+				password1Ele.focus();
+				return false;
+			}
+			if(password2Ele != passwordVal){
+				window.alert('密码不一致！'); 
+				password2Ele.focus();
+				return false;
+			}
+			return true;
+		}
+		// 将用户名、密码、确认密码中的特殊符号替换成对应的html实体，以防止SQL注入的产生
+		function entitis(str) {
+			str = str.relace(/&/g,'&amp;');//保证&的替换为最先
+			str = str.relace(/'/g,'&#39;');
+			str = str.relace(/"/g,'&quot;');
+			str = str.relace(/>/g,'&gt;');
+			str = str.relace(/</g,'&lt;');
+			str = str.relace(/ /g,'&nbsp;');
+			return str;
+		}
+	</script>
+</head>
+<body>
+	<form method='post' onsubmit='return validateForm()'>
+		<table width="600" border="1" cellpadding="10" cellspacing="0">
+			<tr>
+				<td>用户名</td>
+				<td><input type="text" name='username' id="username"></td>
+			</tr>
+			<tr>
+				<td>密码</td>
+				<td><input type="password" name='password1' id="password1"></td>
+			</tr>
+			<tr>
+				<td>确认密码</td>
+				<td><input type="password" name='password2' id="password2"></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="submit" value="注册"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

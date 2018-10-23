@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>location对象</title>
+	<script>
+		function redirect(){
+			var selEle = document.getElementById('freindlink');
+			var url = selEle.value;
+			location.href = url;
+		}
+	</script>
+</head>
+<body>
+	友情链接
+	<select id="freindlink" onchange="redirect()">
+		<option value="">请选择</option>
+		<option value="http://www.sina.com">新浪</option>
+		<option value="http://www.163.com">网易</option>
+		<option value="http://www.baidu.com">百度</option>
+	</select>
+</body>
+</html>

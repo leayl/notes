@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>dom编程</title>
+	<script>
+		function removeAllPara() {
+			// 获取文档中由p标签形成的集合（数组）
+			var pEle = document.getElementsByTagName('p');
+			for (var i = 0; i < pEle.length; i++) {
+				pEle[i].parentNode.removeChild(pEle[i]);
+				i--;
+			}
+		}
+	</script>
+</head>
+<body>
+	<p>段落1</p>
+	<p>段落2</p>
+	<div>
+		<h1>标题1</h1>
+		<p>段落3</p>
+		<h2>标题2</h2>
+	</div>
+	<input type="button" value="单击，统计页面中段落数量" onclick="removeAllPara()">
+</body>
+</html>

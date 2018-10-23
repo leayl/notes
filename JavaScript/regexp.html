@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>正则表达式</title>
+	<script>
+		var str = '235sdfgdf3we4awe32';
+		str = str.replace(/(\d+)/g,
+			'<span style="color:red">$1</span>')
+		document.write(str)//数字变红
+
+		var date = '12/25/2018';
+		date = date.replace(/(((\d{1,})\/(\d{1,}))\/(\d{4}))/,
+			'$5-$3-$4');
+		document.write('中文日期格式为：'+date);
+		//中文日期格式为：2018-12-25
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

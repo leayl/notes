@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>location</title>
+	<script>
+		function changeUrl() {
+			location.href = 'search.html?id=1&action=remove';
+		}
+		function gatPara() {
+			var str = location.search;
+			window.alert(str);
+		}
+	</script>
+</head>
+<body>
+	<p><input type="button" value="单击改变地址栏的表现" onclick="changeUrl()"></p>
+	<p><input type="button" value="获取地址栏参数" onclick="gatPara()"></p>
+</body>
+</html>
